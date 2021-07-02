@@ -10,7 +10,7 @@ router.post(
     '/register',
     [
         check('email','Invalid email').isEmail(),
-        check('password', 'Error password'), isLength({min: 6})
+        check('password', 'Error password').isLength({min: 6})
     ],
     async (request, responses)=>{
     try{
@@ -40,7 +40,7 @@ router.post(
     '/login',
         [
             check('email','Enter correct email').normalizeEmail().isEmail(),
-            check('password', 'Enter correct password'), exists()
+            check('password', 'Enter correct password').exists()
         ],
         async (request, responses)=>{
         try{

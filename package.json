@@ -2,10 +2,12 @@
   "name": "shreder-link",
   "version": "1.0.0",
   "description": "Mern stack",
-  "main": "App.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node App.js",
-    "server": "nodemon App.js"
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
