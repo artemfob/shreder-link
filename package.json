@@ -1,0 +1,32 @@
+{
+  "name": "shreder-link",
+  "version": "1.0.0",
+  "description": "Mern stack",
+  "main": "App.js",
+  "scripts": {
+    "start": "node App.js",
+    "server": "nodemon App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "shreder-link"
+  },
+  "keywords": [
+    "mern",
+    "react"
+  ],
+  "author": "Artem Kislyy <artemfob@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.9"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.0"
+  }
+}
