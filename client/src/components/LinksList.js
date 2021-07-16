@@ -25,7 +25,7 @@ export const LinksList = ({ links }) => {
               <td>{link.to}</td> 
               <td>
                 <Link to={`/detail/${link._id}`}>Open</Link>
-              </td>
+              </td> 
             </tr>
           )
       })}
