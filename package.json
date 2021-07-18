@@ -2,10 +2,14 @@
   "name": "shreder-link",
   "version": "1.0.0",
   "description": "Mern stack",
-  "main": "App.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node App.js",
-    "server": "nodemon App.js"
+    "start": "cross-env  NODE_ENV = production node app.js",
+    "server": "nodemon app.js --ignore client",
+    "client": "npm run start --prefix client",
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "dev": "cross-env NODE_ENV = development concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,7 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^6.2.0",
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.9"
   },
   "dependencies": {
@@ -26,7 +31,9 @@
     "config": "^3.3.6",
     "express": "^4.17.1",
     "express-validator": "^6.12.0",
+    "http-proxy-middleware": "^2.0.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.13.0"
+    "mongoose": "^5.13.0",
+    "shortid": "^2.2.16"
   }
 }
